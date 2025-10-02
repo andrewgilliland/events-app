@@ -1,73 +1,39 @@
-# React + TypeScript + Vite
+# Events Admin Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the admin frontend for managing events, designed to support an events website. The project is built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui, and is hosted on Cloudflare Pages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Admin interface for creating and managing events
+- Modern React (v19) with hooks and functional components
+- Tailwind CSS for rapid UI development
+- TypeScript for type safety
+- Vite for fast development and builds
+- shadcn/ui for accessible, customizable UI components
+- Cloudflare Pages deployment
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** & **React DOM**: UI library for building interactive interfaces
+- **TypeScript**: Static typing for JavaScript
+- **Vite**: Next-generation frontend tooling
+- **Tailwind CSS**: Utility-first CSS framework
+- **shadcn/ui**: Component library built on Radix UI and Tailwind CSS
+- **Lucide React**: Icon library
+- **ESLint**: Linting and code quality
+- **Cloudflare Pages**: Hosting and deployment
 
-## Expanding the ESLint configuration
+## Using shadcn/ui
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project uses [shadcn/ui](https://ui.shadcn.com/) for building accessible and customizable UI components. Components are added and customized as needed, leveraging Tailwind CSS for styling. Refer to the shadcn/ui documentation for usage and customization details.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Scripts
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `npm run dev`: Start local development server
+- `npm run build`: Build for production (TypeScript + Vite)
+- `npm run preview`: Preview production build locally
+- `npm run lint`: Run ESLint
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Deployment
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is optimized for deployment on Cloudflare Pages. After building, deploy the output directory as specified in your Cloudflare Pages settings.
