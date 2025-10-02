@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-primary  py-6 mt-12">
+    <footer className="bg-neutral-800 py-6 mt-12">
       <div className="container mx-auto px-4 text-center text-white">
         &copy; {new Date().getFullYear()} Events Admin. All rights reserved.
       </div>
