@@ -9,6 +9,14 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 function Dashboard() {
   return (
@@ -30,7 +38,7 @@ function Dashboard() {
         </Button>
       </section>
       <Drawer>
-        <DrawerTrigger>Open</DrawerTrigger>
+        <DrawerTrigger>Open Drawer</DrawerTrigger>
         <DrawerContent>
           <DrawerHeader>
             <DrawerTitle>Are you absolutely sure?</DrawerTitle>
@@ -44,6 +52,18 @@ function Dashboard() {
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
+      <Sheet>
+        <SheetTrigger>Open Sheet</SheetTrigger>
+        <SheetContent side="left">
+          <SheetHeader>
+            <SheetTitle>Are you absolutely sure?</SheetTitle>
+            <SheetDescription>
+              This action cannot be undone. This will permanently delete your
+              account and remove your data from our servers.
+            </SheetDescription>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
     </main>
   );
 }

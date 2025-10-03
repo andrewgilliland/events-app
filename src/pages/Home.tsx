@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Button } from "../components/ui/button";
 
 function Home() {
@@ -18,6 +19,9 @@ function Home() {
         >
           Create Event
         </Button>
+        <Link to="/dashboard" className="ml-4 text-blue-500 underline">
+          Go to Dashboard
+        </Link>
       </section>
     </main>
   );
