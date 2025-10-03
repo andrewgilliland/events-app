@@ -9,7 +9,7 @@ import {
 
 function Header() {
   return (
-    <header className="bg-neutral-800 text-white ">
+    <header className="bg-neutral-800 text-white">
       <div className="flex justify-between items-center">
         <div className="bg-primary px-5 py-3">
           <Link to="/">
