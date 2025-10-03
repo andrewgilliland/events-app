@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/drawer";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -67,6 +68,9 @@ function Dashboard() {
               This action cannot be undone. This will permanently delete your
               account and remove your data from our servers.
             </SheetDescription>
+            <SheetClose>
+              <Button variant="outline">Close</Button>
+            </SheetClose>
           </SheetHeader>
         </SheetContent>
       </Sheet>
