@@ -29,8 +29,8 @@ function Dashboard() {
   return (
     <main className="container mx-auto px-4 py-12 flex flex-col items-center flex-1">
       <section className="max-w-xl">
-        <h2 className="text-4xl font-bold mb-4">Dashboard</h2>
-        <p className="mb-8 text-lg text-gray-700">
+        <h2 className="text-4xl text-white font-bold mb-4">Dashboard</h2>
+        <p className="mb-8 text-lg text-white">
           Welcome to the Events Admin dashboard. Create, edit, and manage events
           for your website with ease.
         </p>
